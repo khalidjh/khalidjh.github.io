@@ -1,51 +1,110 @@
 body {
-    background-color: #00887d !important;
-    padding: 10vw;
+    
+}
+
+.upperSection {
+    margin-bottom: 15px;
+    height: 50vh;
+    background: #212136;
+    background: -moz-linear-gradient(-45deg, #212136 0%, #63639c 100%);
+    background: -webkit-linear-gradient(-45deg, #212136 0%,#63639c 100%);
+    background: linear-gradient(135deg, #212136 0%,#63639c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212136', endColorstr='#63639c',GradientType=1 );
+}
+
+.questionCircles {
+    
+}
+
+.questionCircles img {
+    width: 25px;
+    margin: 4px;
+}
+
+#scoreBar {
+    position: relative;
+    bottom: 0;
+}
+
+#scoreCircle {
+    position: relative;
+}
+
+#scoreText {
+    color: white;
+    font-size: 32px;
 }
 
 .header {
-    border-radius: 100px;
-    background-color: white;
-    color: #00887d;
-    padding: 5vw;
 }
 
 .questionContainer {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    border-radius: 25px;
+    margin: 50px 0px;
 }
 
 .questionBody {
-    padding: 5vh;
+    font-size: 1.2em;
 }
 
 .question {
-    color: #00887d;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 4em;
+}
+
+.choices {
+    padding: 0 20px;
 }
 
 .choices .col-6 {
-    padding: 0;
+    padding: 15px 0;
 }
 
 .choice {
-    width: 90%;
-    height: 10vw;
+    width: 80%;
 /*    padding: 10px 50px;*/
 /*    border: 1px solid #333;*/
     border: none;
     color: white;
-    border-radius: 50px;
-    background: #00cdbc;
-    margin: 5px;
+    border-radius: 5px;
+    background: #429CC6;
+}
+
+.choice:focus, #restartBtn:focus  {
+    outline: none;
+}
+
+.scoreSection {
+    display: none;
+    color: #4b4b4b;
+    margin-bottom: 25px;
+}
+
+#yourScore {
+    color: #429CC6;
+    font-size: 1.5em;
 }
 
 #restartBtn {
-    color: #00887d;
+    color: white;
     font-weight: bold;
-    background-color: white;
+    background-color: #429CC6;
     border-radius: 100px;
     border: none;
     padding: 5vw;
     display: none;
+}
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: yellow;
+  box-shadow: 0 0 4px #999;
+  outline: none;
 }

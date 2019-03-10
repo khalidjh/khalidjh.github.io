@@ -1,288 +1,124 @@
 $(document).ready(function(){
-    var words2 = {
-"جيه اكرداش" : "شو اتسوي",
-"اوتناي" : "ماتبى",
-"بر جرا" : "ليش",
-"خش اندش" : "حياك الله",
-"خاترت مي" : "أحبك",
-"خاترت امناي" : "ما أحبك",
-"كجو" : "وين",
-"كجو اجيداش" : "وين بتروح",
-"كجو رفتِش" : "وين رحت",
-"أي خدا جنت واسيت" : "الله ياخذ رووحك",
-"زشت" : "كريهه",
-"اويس" : "اوقف",
-"اوني" : "اقعد",
-"بورو" : "روح",
-"جش بكو" : "شوف",
-"كارجخ" : "سكين",
-"اجم" : "باروح",
-"خستم" : "تعبان",
-"مي اختم" : "باروح انام",
-"خلاص أمكو" : "كملت",
-"ماشين او موتور" : "سياره",
-"جوّون" : "حلوه",
-"أمخلده" : "شريت",
-"زود" : "بسرعه",
-"خدافز" : "مع السلامه",
-"خاكش شرنقن" : "حبّوب",
-"سكوت بكو" : "اسكت",
-"بازي بوكو" : "العب",
-"نون" : "خبز",
-"ت كشيدا اقرم" : "باكفخك",
-"قربه كور" : "قطوه عميه",
-"سق" : "كلب",
-"جتن؟" : "شبلاك",
-"خيلي" : "وايد",
-"سبا" : "باجر",
-"إرز" : "اليوم",
-"ماي" : "آو",
-"بند بوكو" : "صكه",
-"واز بكو" : "بطله",
-"قارمن" : "حر",
-"ساردن" : "برد",
-"جـ زشتي" : "فشيله",
-"دكن" : "دكان",
-"نزيك" : "جريب",
-"داريا" : "بحر",
-"مايّ" : "سمج",
-"آميم" : "عمي",
-"خالو" : "خالي",
-"بُس آميم (حرف الباء بو ثلاث نقاط" : "ولد عمي  P)",
-"دت آميم" : "بنت عمي",
-"بس خاليم" : "ولد خالي",
-"دت خاليم" : "بنت خالي",
-"كنقل" : "صغير",
-"قب" : "كبير",
-"لوغر" : "ضعيف",
-"جاق" : "متين",
-"كاكا" : "اخوي العود",
-"براسي" : "اخوي الصغير",
-"دادا" : "أختي العودة",
-"خنكي" : "اختي الاصغيرة",
-"قشنامن" : "يوعان",
-"سيرم" : "شبعان",
-"تشنمن" : "عطشان",
-"اوخت" : "ارقد",
-"امناي" : "مابي",
-"اس وكت" : "من وقت",
-"ورقار" : "متاخر",
-"بشيمون ابش" : "بتندم",
-"قنا" : "مجنون",
-"شير" : "حليب",
-"خاكش سور" : "دم ه ثقيل",
-"خاكش شرين" : "حليلة",
-"لي بونك" : "السطح",
-"خدا" : "الله",
-"ماه" : "قمر",
-"سان" : "صحن",
-"زنك" : "ريوق",
-"جاش" : "غدا",
-"شوم" : "عشا",
-"جن بشي" : "اسبح",
-"مارد" : "رجل",
-"زن" : "مرأة",
-"بسه با" : "عقب باجر",
-"خنو" : "ضحكة",
-"خنو اكرداي" : "قاعد يضحك",
-"غاليجة" : "زولية",
-"كنجة" : "فانيلة",
-"سورت" : "وجه",
-"كشيده" : "كف",
-"جش" : "عين",
-"جشت" : "عينك",
-"جشش" : "عينه",
-"خدا" : "الله",
-"ددون" : "اسنان",
-"كلا" : "را",
-"خيابان" : "شارع",
-"بازر" : "سوق",
-"بول" : "مال",
-"ذهب" : "تلا",
-"قمر" : "ما",
-"شمس" : "خورشي",
-"مدينة" : "شهر",
-"مريض" : "بيما",
-"اب" : "ماء",
-"كاتخ" : "صالونه",
-"برنج" : "عيش",
-"قوشت ( قيشت" : "لحم ",
-"ساوزي" : "خضره",
-"بيا" : "بصل",
-"هندونه" : "يح",
-"باتيل" : "جدر",
-"كسات" : "مله",
-"شير" : "حليب",
-"بنير" : "جبن",
-"نخد" : "نخي",
-"نمور" : "ليمون",
-"تش" : "ضو / نار",
-"زغال" : "فحم",
-"بفر" : "ثلج",
-"آو" : "ماي",
-"ميز" : "طاوله",
-"دشّوري" : "مغسله",
-"كلاس" : "قلاص",
-"تابي / تاوه" : "مقلا",
-"سيمين" : "صينيه او غنجه",
-"امبُل" : "منقاش الفحم",
-"قزرك" : "جزر",
-"بت باتيل" : "قاع الجدر",
-"بل لي ليت" : "مالت عليك",
-"شرم ناكنش" : "ماتستحي ؟؟",
-"شرم بكو" : "استح",
-"آجي" : "حجي",
-"بيبي" : "يدوه",
-"بولند" : "طوي",
-"سبيلي" : "بوشنب",
-"خوبم" : "بخير",
-"أكن باووم" : "ابوي وينه",
-"كيه ؟" : "من",
-"آميت" : "عمك",
-"كي وابس اته" : "متى بيرجع",
-"دو سأت" : "ساعتين",
-"مه اجم خونه" : "انا باروح البيت",
-"سلامش برسين" : "سلم عليه",
-"طعمه حلو" : "خوش مزة",
-"كف" : "جبلاخ",
-"قمر" : "ماه",
-"شهر" : "ماه",
-"بنيه" : "دت",
-"ولد" : "بس",
-"خال" : "خالو",
-"ام" : "ننه",
-"ليحين" : "هنوزا",
-"صلاه" : "نماز",
-"برو" : "روح / ي",
-"بدا" : "تعال / ي",
-"رومزون" : "رمضان",
-"غناه" : "مينون / ه",
-"تماشا" : "عرس",
-"عكس" : "صورة",
-"زوود" : "بسرعة",
-"فنجوون" : "فنيال",
-"هميشه" : "دايما",
-"هرف بزن" : "تكلم",
-"بشنوف" : "أسمع",
-"جشبكو" : "جوف",
-"بخو" : "اكل",
-"رنج" : "اللون",
-"سفيد" : "الابيض",
-"سياه" : "الاسود",
-"سورخ" : "الاحم",
-"زرد" : "الاصفر",
-"ساوز" : "الاخضر",
-"نيلن" : "الازرق",
-"برن" : "المطر",
-"بازال" : "السو",
-"جيخه" : "الصراخ",
-"كالون" : "القدو",
-"جمه" : "الفستان",
-"سردن" : "برد",
-"قرمن" : "حر",
-"مردم" : "الناس",
-"واسي" : "اخذ",
-"ترسن" : "خايف",
-"تريغ" : "عصبي",
-"شنجاخ" : "المشباص",
-"ميجم كار" : "باروح الشغل",
-"مي اوختم" : "ابي انام",
-"جند سال اتن" : "جم عمرك",
-"زود بدا" : "بسرعه تعال",
-"مينش جونن" : "شعرها حلو"
-}
+
     var prevArr = [];
     
     //console.log(Object.keys(words2)[0]);
     
-    var numbers = getNumbers();
-    var q = Object.keys(words2)[numbers[0]];
-    var a = Object.values(words2)[numbers[0]];
-    var c1 = a;
-    var c2 = Object.values(words2)[numbers[1]];
-    var c3 = Object.values(words2)[numbers[2]];
-    var c4 = Object.values(words2)[numbers[3]];
-    
-//    for(var i = 0; i < numbers.length; i++)
-//        console.log(numbers[i])
-    
-    console.log("q: "+q);
-    console.log("a: "+a);
-    console.log("c1: "+c1);
-    console.log("c2: "+c2);
-    console.log("c3: "+c3);
-    console.log("c4: "+c4);
-    
-    $(".question").text(q);
-    $("#choice1").text(c1);
-    $("#choice2").text(c2);
-    $("#choice3").text(c3);
-    $("#choice4").text(c4);
+    // ######## CONFIGURATIONS ########### //
     
     var currentRound = 0;
     var totalRounds = 3;
-    
     var score = 0;
+    
+    var questionColor = "#429CC6";
+    var correctColor = "#00cdbc";
+    var wrongColor = "#cd0000";
+    
+    var currentQuestion = 1
+    
+    // ######## CONFIGURATIONS END ########### //
+    
+    setQuestion();
     
     $("#currentRound").text(currentRound);
     $("#totalRounds").text(totalRounds);
-    $("#score").text(score);
-    
-    $(".choice").click(function(){
+    $("#scoreText").text(score);
         
-        if($(this).text() == a ) {
-            score++;
-            $("#score").text(score);
-            $(this).animate({backgroundColor:'blue'}, 300);
+    $(".choice").click(function() {
+        if($(this).attr("answer") == "correct" ) {
+            score = score + 1;
+            $("#scoreText").text(score);
+            console.log("score "+score);
+            $(this).animate({backgroundColor:correctColor}, 200);
             console.log("correct");
+            $("#c"+currentQuestion++).attr("src","img/1x/qg.png");
         } else {
-            $(this).animate({backgroundColor:'red'}, 300);
+            $(this).animate({backgroundColor:wrongColor}, 200);
+            $("#choice1").animate({backgroundColor:correctColor}, 200);
             console.log("Wrong");
+            $("#c"+currentQuestion++).attr("src","img/1x/qr.png");
         }
         
         setTimeout(
         function() 
         {
-            $(".choice").animate({backgroundColor:'#00cdbc'}, 300);
+            $(".choice").animate({backgroundColor:questionColor}, 200);
             currentRound++;
             $("#currentRound").text(currentRound);
             if(currentRound >= totalRounds) {
-                console.log("Finish!\nScore: " + score);
-                $("#restartBtn").fadeIn();
+//                $(".questionBody").fadeOut();
+                $("#totalQuestions").text(totalRounds);
+                $("#yourScore").text(score);
+                $(".choices").fadeOut("300", function () {
+                    $("#restartBtn").fadeIn();
+                    $(".scoreSection").fadeIn();
+                });
                 $(".choice").prop("disabled",true);
             } else {
-                nextQuestion();
+                setQuestion();
             }
-        }, 1000);
+        }, 1500);
     });
-    
-    $(".choice").hover(
-        function(){
-            $(this).animate({backgroundColor:'#00ab9c'}, 300);
-        },
-        function(){
-            $(this).animate({backgroundColor:'#00cdbc'}, 300);
-        }
-    );
     
     $("#restartBtn").hover(
         function(){
-            $(this).animate({backgroundColor:'#c3c3c3'}, 300);
+            $(this).animate({backgroundColor:'#429CC6'}, 200);
         },
         function(){
-            $(this).animate({backgroundColor:'#fff'}, 300);
+            $(this).animate({backgroundColor:'#63b8e0'}, 200);
         }
     );
     
-    $("#restartBtn").click(function(){
+    $("#restartBtn").click(function() {
+        currentQuestion = 1
+        $(".circles").empty()
         $(".choice").prop("disabled",false);
-        nextQuestion();
-        $("#restartBtn").fadeOut();
+        setQuestion();
+        $(".scoreSection").fadeOut();
+        $("#restartBtn").fadeOut("300", function () {
+            $(".choices").fadeIn();
+            $(".questionBody").fadeIn();
+        });
         currentRound = 0;
         $("#currentRound").text(currentRound);
         score = 0;
         $("#score").text(score);
     });
+    
+    function setQuestion() {
+        // Add white question circle at top
+        $(".circles").append('<img id="c'+currentQuestion+'" src="img/1x/qw.png" />');
+        
+        // Get random question indexes
+        var numbers = getNumbers();
+
+        // Set first index as the chosen question
+        var q = Object.keys(words2)[numbers[0]];
+        var a = Object.values(words2)[numbers[0]];
+        console.log("q -> " + q);
+        console.log("a -> " + a);
+        $(".question").text(q);
+        
+        var arr = [0,1,2,3]
+        var firstTime = true
+        $(".choice").removeAttr("answer");
+
+        for(var i = arr.length-1;i>=0;i--) {
+          // Extract one number from 0 to 3
+          elem = arr.splice(Math.floor(Math.random()*arr.length), 1);
+
+          if(firstTime) {
+              // Set it as the question and answer
+              $("#choice"+elem[0]).text(a);
+              $("#choice"+elem[0]).attr("answer", "correct");
+              firstTime = false;
+          } else {
+              // Just set another choice for the other choices
+              c = Object.values(words2)[numbers[i+1]]
+              $("#choice"+elem[0]).text(c);
+          }
+        }
+    }
    
     function getNumbers() {
         var arr = []
@@ -298,27 +134,29 @@ $(document).ready(function(){
         return arr;
     };
     
-    function nextQuestion() {
-        numbers = getNumbers();
-        q = Object.keys(words2)[numbers[0]];
-        a = Object.values(words2)[numbers[0]];
-        c1 = a;
-        c2 = Object.values(words2)[numbers[1]];
-        c3 = Object.values(words2)[numbers[2]];
-        c4 = Object.values(words2)[numbers[3]];
-
-//        console.log("q: "+q);
-//        console.log("a: "+a);
-//        console.log("c1: "+c1);
-//        console.log("c2: "+c2);
-//        console.log("c3: "+c3);
-//        console.log("c4: "+c4);
-
-        $(".question").text(q);
-        $("#choice1").text(c1);
-        $("#choice2").text(c2);
-        $("#choice3").text(c3);
-        $("#choice4").text(c4);
-    }
+//    function nextQuestion() {
+//        numbers = getNumbers();
+//        q = Object.keys(words2)[numbers[0]];
+//        a = Object.values(words2)[numbers[0]];
+//        c1 = a;
+//        c2 = Object.values(words2)[numbers[1]];
+//        c3 = Object.values(words2)[numbers[2]];
+//        c4 = Object.values(words2)[numbers[3]];
+//
+////        console.log("q: "+q);
+////        console.log("a: "+a);
+////        console.log("c1: "+c1);
+////        console.log("c2: "+c2);
+////        console.log("c3: "+c3);
+////        console.log("c4: "+c4);
+//
+//        $(".question").text(q);
+//        $("#choice1").text(c1);
+//        $("#choice2").text(c2);
+//        $("#choice3").text(c3);
+//        $("#choice4").text(c4);
+//        
+//        $(".circles").append('<img id="c'+currentQuestion+'" src="img/1x/qw.png" />')
+//    }
     
 });
