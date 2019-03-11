@@ -3,8 +3,10 @@ body {
 }
 
 .upperSection {
+    padding: 5vw;
     margin-bottom: 15px;
     height: 50vh;
+    position: relative;
     background: #212136;
     background: -moz-linear-gradient(-45deg, #212136 0%, #63639c 100%);
     background: -webkit-linear-gradient(-45deg, #212136 0%,#63639c 100%);
@@ -39,17 +41,20 @@ body {
 }
 
 .questionContainer {
-    margin: 50px 0px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .questionBody {
     font-size: 1.2em;
+    text-align: center;
 }
 
 .question {
-    margin-bottom: 30px;
     color: white;
-    font-size: 4em;
+    font-size: 2em;
 }
 
 .choices {
@@ -61,13 +66,14 @@ body {
 }
 
 .choice {
-    width: 80%;
+    width: 100%;
 /*    padding: 10px 50px;*/
 /*    border: 1px solid #333;*/
     border: none;
     color: white;
     border-radius: 5px;
     background: #429CC6;
+    margin: 10px auto;
 }
 
 .choice:focus, #restartBtn:focus  {

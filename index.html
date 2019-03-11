@@ -24,7 +24,7 @@
                         <div class="col-12">
                             <div class="row text-center questionBody">
                                 <div class="col-12">
-                                    <div>معنى كلمة <h1 class="question">برجا</h1>?</div>
+                                    <div><h1 class="question"></h1></div>
                                 </div>
                             </div>
                         </div>
@@ -43,18 +43,7 @@
             <div class="row lowerSection">
                 <div class="col-12">
                     <div class="row text-center choices">
-                        <div class="col-12">
-                            <button class="choice" id="choice0">c1</button>
-                        </div>
-                        <div class="col-12">
-                            <button class="choice" id="choice1">c1</button>
-                        </div>
-                        <div class="col-12">
-                            <button class="choice" id="choice2">c1</button>
-                        </div>
-                        <div class="col-12">
-                            <button class="choice" id="choice3">c1</button>
-                        </div>
+                        
                     </div>
                     <div class="row text-center">
                         <div class="col-12 text-center">
@@ -67,47 +56,21 @@
                     </div>
                 </div>
             </div>
-<!--
-            <div class="row text-center header">
-                <div class="col-6">
-                    <h1><span id="totalRounds">0</span>\<span id="currentRound">0</span></h1>
-                    <div class="rounds">سؤال</div>
-                </div>
-                <div class="col-6">
-                    <h1 id="score">0</h1>
-                    <div>النقاط</div>
-                </div>
-            </div>
--->
-<!--
-            <div class="row text-center header questionContainer2">
-                <div class="col-12">
-                    <div class="row text-center questionBody">
-                        <div class="col-12">
-                            <div>معنى كلمة <h1 class="question">hello</h1></div>
-                        </div>
-                    </div>
-                    <div class="row text-center choices">
-                        <div class="col-6">
-                            <button class="choice" id="choice1">c1</button>
-                        </div>
-                        <div class="col-6">
-                            <button class="choice" id="choice2">c1</button>
-                        </div>
-                        <div class="col-6">
-                            <button class="choice" id="choice3">c1</button>
-                        </div>
-                        <div class="col-6">
-                            <button class="choice" id="choice4">c1</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 text-center">
-                    <button id="restartBtn">محاولة مجددا</button>
-                </div>
-            </div>
--->
         </div>
+
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAjhbnJuYzZhgMFUwZfNE9AqD3TvvUQ0cI",
+            authDomain: "quizzy-b7e11.firebaseapp.com",
+            databaseURL: "https://quizzy-b7e11.firebaseio.com",
+            projectId: "quizzy-b7e11",
+            storageBucket: "quizzy-b7e11.appspot.com",
+            messagingSenderId: "980238756164"
+        };
+        firebase.initializeApp(config);
+        </script>
         
         <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
